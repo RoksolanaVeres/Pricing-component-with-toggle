@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Pricing component with toggle</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <h1 class="main-header">Our Pricing</h1>
+      <div class="toggle-container">
+        <span class="payment-plan">Annually</span>
+        <input type="checkbox" class="toggle-button" checked />
+        <span class="payment-plan">Monthly</span>
+      </div>
+      <div class="pricing-cards__container">
+        <!-- basic card -->
+        <div class="pricing-card pricing-card--basic">
+          <h2 class="pricing-card__header">Basic</h2>
+          <p class="pricing-card__dollar-price-container">
+            <span class="pricing-card__dollar-sign">&dollar;</span>
+            <span class="pricing-card__price pricing-card__price--basic"
+              >19.99</span
+            >
+          </p>
+          <div class="pricing-card__divider"></div>
+          <p class="pricing-card__details">500 GB Storage</p>
+          <div class="pricing-card__divider"></div>
+          <p class="pricing-card__details">2 Users Allowed</p>
+          <div class="pricing-card__divider"></div>
+          <p class="pricing-card__details">Send up to 3 GB</p>
+          <div class="pricing-card__divider"></div>
+          <button class="button pricing-card__button">Learn More</button>
+        </div>
+        <!-- professional card -->
+        <div class="pricing-card pricing-card--pro">
+          <h2 class="pricing-card__header pricing-card__header--pro">
+            Professional
+          </h2>
+          <p
+            class="pricing-card__dollar-price-container pricing-card__dollar-price-container--pro"
+          >
+            <span class="pricing-card__dollar-sign">&dollar;</span>
+            <span class="pricing-card__price pricing-card__price--pro"
+              >24.99</span
+            >
+          </p>
+          <div class="pricing-card__divider"></div>
+          <p class="pricing-card__details">1 TB Storage</p>
+          <div class="pricing-card__divider"></div>
+          <p class="pricing-card__details">5 Users Allowed</p>
+          <div class="pricing-card__divider"></div>
+          <p class="pricing-card__details">Send up to 10 GB</p>
+          <div class="pricing-card__divider"></div>
+          <button class="button pricing-card__button--pro">Learn More</button>
+        </div>
+        <!-- Master card -->
+        <div class="pricing-card pricing-card--master">
+          <h2 class="pricing-card__header">Master</h2>
+          <p class="pricing-card__dollar-price-container">
+            <span class="pricing-card__dollar-sign">&dollar;</span>
+            <span class="pricing-card__price pricing-card__price--master"
+              >39.99</span
+            >
+          </p>
+          <div class="pricing-card__divider"></div>
+          <p class="pricing-card__details">2 TB Storage</p>
+          <div class="pricing-card__divider"></div>
+          <p class="pricing-card__details">10 Users Allowed</p>
+          <div class="pricing-card__divider"></div>
+          <p class="pricing-card__details">Send up to 20 GB</p>
+          <div class="pricing-card__divider"></div>
+          <button class="button pricing-card__button">Learn More</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/RoksolanaVeres"
+        >Roksolana Veres</a
+      >.
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

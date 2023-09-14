@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --gradient-button: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  --gradient-card: linear-gradient(
+    to bottom,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  --blue: hsl(237, 63%, 64%);
+  -light-blue: hsl(236, 72%, 79%);
+  --very-light-grayish-blue: hsl(240, 78%, 98%);
+  --light-grayish-blue: hsl(234, 14%, 74%);
+  --light-grayish-blue-opacity: hsla(234, 14%, 74%, 0.5);
+  --grayish-blue: hsl(233, 13%, 49%);
+  --grayish-blue-opacity: hsla(233, 13%, 49%, 0.5);
+  --dark-grayish-blue: hsl(232, 13%, 33%);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  min-height: 100vh;
+  background-color: var(--very-light-grayish-blue);
+  background-image: url("./images/bg-top.svg");
+  background-position-x: 22rem;
+  background-repeat: no-repeat;
+  padding: 4.7em 0;
+}
+
+.main-container {
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+}
+
+.main-header {
+  color: var(--grayish-blue);
+  font-size: 2.5rem;
+  padding-bottom: 1.6em;
+}
+
+/* toggle */
+.toggle-container {
+  padding-bottom: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.toggle-button {
+  -webkit-appearance: none;
+  position: relative;
+  width: 60px;
+  height: 35px;
+  border-radius: 25px;
+  background-image: var(--gradient-button);
+  cursor: pointer;
+  outline: none;
+}
+
+.toggle-button:active {
+  opacity: 0.5;
+}
+
+.toggle-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  height: 2em;
+  width: 2em;
+  background-color: white;
+  transition: left 0.3s;
+}
+
+.toggle-button:checked::after {
+  left: 70%;
+}
+
+.payment-plan {
+  font-size: 1.2rem;
+  color: var(--light-grayish-blue);
+}
+
+/* pricing-cards */
+.pricing-cards__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.pricing-card {
+  text-align: center;
+  padding: 2em;
+  height: fit-content;
+  border-radius: 1em;
+  box-shadow: 0 10px 10px rgba(178, 178, 178, 0.47);
+}
+
+.pricing-card--basic,
+.pricing-card--master {
+  background-color: white;
+  color: var(--grayish-blue);
+}
+
+.pricing-card--pro {
+  background-image: var(--gradient-card);
+  color: white;
+}
+
+.pricing-card__header {
+  padding: 0.4em 0 2.7em;
+  font-size: 1.5rem;
+}
+
+.pricing-card__header--pro {
+  color: white;
+}
+
+.pricing-card__dollar-price-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding-bottom: 2.7em;
+  color: var(--dark-grayish-blue);
+}
+
+.pricing-card__dollar-price-container--pro {
+  color: white;
+}
+
+.pricing-card__dollar-sign {
+  font-size: 3rem;
+}
+
+.pricing-card__price {
+  font-size: 5.5rem;
+}
+
+.pricing-card__divider {
+  height: 1px;
+  width: 100%;
+  background-color: var(--light-grayish-blue);
+}
+
+.pricing-card__details {
+  font-size: 1.5rem;
+  padding: 22px 0;
+}
+
+/* buttons */
+.button {
+  width: 100%;
+  padding: 1.5em;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.2em;
+  border-radius: 1em;
+  margin-top: 3em;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.pricing-card__button {
+  background-image: var(--gradient-button);
+  color: white;
+}
+
+.pricing-card__button--pro {
+  background-color: white;
+  color: var(--blue);
+}
+
+.pricing-card__button:hover {
+  background-image: none;
+  background-color: transparent;
+  color: var(--blue);
+  outline: 1px solid var(--blue);
+}
+
+.pricing-card__button--pro:hover {
+  background-color: transparent;
+  color: white;
+  outline: 1px solid white;
+}
+
+.pricing-card__button:active {
+  background-color: var(--light-grayish-blue-opacity);
+}
+
+.pricing-card__button--pro:active {
+  background-color: var(--light-grayish-blue-opacity);
+}
+
+/* footer */
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 2em;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+@media (min-width: 600px) {
+  body {
+    background-image: url("./images/bg-top.svg"), url("./images/bg-bottom.svg");
+    background-position: right top, left bottom;
+    background-repeat: no-repeat no-repeat;
+  }
+
+  .main-container {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    padding: 5em 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+  }
+
+  .pricing-cards__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .pricing-card--basic {
+    border-radius: 1em 0 0 1em;
+  }
+
+  .pricing-card--master {
+    border-radius: 0 1em 1em 0;
+  }
+
+  .pricing-card--pro {
+    padding-top: 4em;
+    padding-bottom: 3.6em;
+  }
+}
