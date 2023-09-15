@@ -62,7 +62,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+  gap: 3%;
 }
 
 .toggle-button {
@@ -97,7 +97,7 @@ body {
   left: 70%;
 }
 
-.payment-plan {
+.toggle_payment-plan {
   font-size: 1.2rem;
   color: var(--light-grayish-blue);
 }
@@ -155,7 +155,7 @@ body {
 }
 
 .pricing-card__price {
-  font-size: 5.5rem;
+  font-size: 4rem;
 }
 
 .pricing-card__divider {
@@ -235,6 +235,15 @@ body {
 
   .main-container {
     width: 75%;
+    max-width: 1060px;
+  }
+
+  .toggle-container {
+    gap: 2em;
+  }
+
+  .pricing-card__price {
+    font-size: 5.5rem;
   }
 }
 
